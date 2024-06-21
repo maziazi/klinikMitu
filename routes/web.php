@@ -11,7 +11,7 @@ Route::get('/consultation', function () {
 });
 
 Route::get('/docter', function () {
-    return view('docter');
+    return view('docter/index');
 });
 
 Route::get('/facialwash', function () {
@@ -42,11 +42,11 @@ Route::get('/treatment', function () {
     return view('treatment');
 });
 
-use App\Http\Controllers\DocterAIController;
+// use App\Http\Controllers\DocterAIController;
 
-Route::get('/docter', function () {
-    return view('docter.index');
-});
+// Route::get('/docter', function () {
+//     return view('docter.index');
+// });
 
-Route::post('/docter/analyze', [DocterAIController::class, 'analyze'])->name('docter.analyze');
+// Route::post('/docter/analyze', [DocterAIController::class, 'analyze'])->name('docter.analyze');
 

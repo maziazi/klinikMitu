@@ -9,7 +9,7 @@
         </div>
         <div class="row g-5">
             <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-                <form id="keluhanForm" action="{{ route('docter.analyze') }}" method="POST">
+                <form id="keluhanForm" action="" method="POST">
                     @csrf
                     <div class="mb-4">
                         <textarea class="form-control border-0" rows="5" name="skin_problem" placeholder="Masukan keluhan untuk dapat diatasi dengan AI"></textarea>

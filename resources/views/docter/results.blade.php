@@ -10,12 +10,12 @@
         <div class="row g-5">
             <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="bg-light rounded h-100 p-5">
-                    <h4 class="mb-3">Solusi untuk Keluhan Anda</h4>
+                    <!-- <h4 class="mb-3">Solusi untuk Keluhan Anda</h4>
                     <p class="mb-4">{{ $treatment_plan }}</p>
                     <h4 class="mb-3">Rekomendasi Produk</h4>
                     @foreach ($sorted_products as $product)
                         <p>{{ $product[0] }} - ${{ $product[1] }}</p>
-                    @endforeach
+                    @endforeach -->
                 </div>
             </div>
         </div>
