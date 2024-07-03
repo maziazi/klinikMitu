@@ -10,6 +10,9 @@ Route::get('/consultation', function () {
     return view('consultation');
 });
 
+Route::view('/consultation', 'consultation')->name('consultation.index');
+
+
 Route::get('/docter', function () {
     return view('docter/index');
 });

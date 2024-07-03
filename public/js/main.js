@@ -96,3 +96,5 @@
     
 })(jQuery);
 
+// Initialize WOW.js for animations
+new WOW().init();
