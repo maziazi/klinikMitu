@@ -9,6 +9,7 @@
         </div>
     </section>
 
+    <!-- // namaPerawatan, deskripsiPerawatan, manfaatPerawatan, hargaPerawatan -->
     <!-- Bagian Perawatan -->
     <section class="treatment-section py-5" style="background-color: #f8f9fa;">
         <div class="container">
@@ -22,10 +23,9 @@
                         <div class="card-body">
                             <h5 class="card-title text-primary">Facial</h5>
                             <p class="card-text">Metode: Pembersihan Mendalam</p>
-                            <p class="card-text">Durasi: 60 Menit</p>
                             <p class="card-text">Manfaat: Membersihkan dan mencerahkan kulit wajah.</p>
                             <p class="card-text">Harga: Rp 300.000</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                             <p class="card-text">Durasi: 45 Menit</p>
                             <p class="card-text">Manfaat: Mengurangi bekas jerawat dan garis halus.</p>
                             <p class="card-text">Harga: Rp 400.000</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                             <p class="card-text">Durasi: 30 Menit</p>
                             <p class="card-text">Manfaat: Mengencangkan kulit dan mengurangi kerutan.</p>
                             <p class="card-text">Harga: Rp 500.000</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                             <p class="card-text">Durasi: 60 Menit</p>
                             <p class="card-text">Manfaat: Mengatasi pigmentasi dan tekstur kulit tidak merata.</p>
                             <p class="card-text">Harga: Rp 600.000</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                             <p class="card-text">Durasi: 90 Menit</p>
                             <p class="card-text">Manfaat: Rejuvenasi kulit dan mengurangi bekas luka.</p>
                             <p class="card-text">Harga: Rp 700.000</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -90,11 +90,49 @@
                             <p class="card-text">Durasi: 60 Menit</p>
                             <p class="card-text">Manfaat: Mengencangkan kulit dan memperbaiki kontur wajah.</p>
                             <p class="card-text">Harga: Rp 800.000</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Purchase Success Toast -->
+        <div aria-live="polite" aria-atomic="true" style="position: relative; z-index: 1050;">
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Pembelian Berhasil</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Terima kasih atas pembelian Anda. Pesanan Anda akan segera diproses!
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <script>
+        function filterProducts(type) {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (type === 'all' || card.dataset.type === type) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    function purchaseSuccess() {
+            Swal.fire({
+                title: 'Sukses!',
+                text: 'Pembelian berhasil! Terima kasih telah membeli produk kami.',
+                icon: 'success',
+                confirmButtonText: 'Oke'
+            });
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 @endsection

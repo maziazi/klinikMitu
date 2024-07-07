@@ -8,16 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="{{ url('/') }}" class="nav-item nav-link active">Beranda</a>
-            <div class="nav-item dropdown">
-                <a href="{{ url('/product') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produk</a>
-                <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                    <a href="{{ url('/micillarwater') }}" class="dropdown-item">Pembersih Wajah</a>
-                    <a href="{{ url('/facialwash') }}" class="dropdown-item">Sabun Cuci Muka</a>
-                    <a href="{{ url('/toner') }}" class="dropdown-item">Toner</a>
-                    <a href="{{ url('/sunscreen') }}" class="dropdown-item">Sunscreen</a>
-                    <a href="{{ url('/other') }}" class="dropdown-item">Lainnya</a>
-                </div>
-            </div>
+            <a href="{{ url('/product') }}" class="nav-link dropdown-toggle">Produk</a>
             <a href="{{ url('/treatment') }}" class="nav-item nav-link">Perawatan</a>
             <a href="{{ url('/consultation') }}" class="nav-item nav-link">Konsultasi</a>
             <a href="{{ url('/docter') }}" class="nav-item nav-link">Dokter AI</a>
