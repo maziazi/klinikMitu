@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produk; // Pastikan model Produk diimpor
 
 class ProductController extends Controller
 {
     public function index()
     {
-        // Kembalikan view yang sesuai untuk halaman produk
-        return view('produk');
+        $products = Produk::all(); // Mengambil semua data produk dari tabel Produk
+
+        return view('products', compact('products'));
     }
 }

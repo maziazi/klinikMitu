@@ -2,60 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\TreatmentController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\DocterController;
 
-
+// Route to homepage
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/consultation', function () {
-    return view('consultation');
-});
+// Route to consultation page
+Route::get('/consultation', [ConsultationController::class, 'index'])->name('consultation.index');
 
-Route::view('/consultation', 'consultation')->name('consultation.index');
+// Route to doctor page
+Route::get('/docter', [DocterController::class, 'index'])->name('docter.index');
 
+// Route to treatments
+Route::get('/treatment', [TreatmentController::class, 'index'])->name('treatment.index');
 
-Route::get('/docter', function () {
-    return view('docter/index');
-});
-
-Route::get('/facialwash', function () {
-    return view('facialwash');
-});
-
-Route::get('/micillarwater', function () {
-    return view('micillarwater');
-});
-
-Route::get('/other', function () {
-    return view('other');
-});
-
-Route::get('/product', function () {
-    return view('product');
-});
-
-Route::get('/sunscreen', function () {
-    return view('sunscreen');
-});
-
-Route::get('/toner', function () {
-    return view('toner');
-});
-
-Route::get('/treatment', function () {
-    return view('treatment');
-});
-
-
-
-Route::get('/', [DokterController::class, 'index']);
-
-
-// use App\Http\Controllers\DocterAIController;
-
-// Route::get('/docter', function () {
-//     return view('docter.index');
-// });
-
-// Route::post('/docter/analyze', [DocterAIController::class, 'analyze'])->name('docter.analyze');
+// Route to products
+Route::get('/product', [ProductController::class, 'index'])->name('product.index');

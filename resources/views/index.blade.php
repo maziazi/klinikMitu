@@ -290,45 +290,80 @@
     <!-- Feature End -->
 
     <!-- Team Start -->
-  <!-- Team Start -->
-<!-- Team Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <p class="d-inline-block border rounded-pill py-1 px-4">Dokter</p>
-            <h1>Dokter Berpengalaman Kami</h1>
-        </div>
-        <div class="row g-4">
-            @foreach($dokters as $dokter)
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Dokter</p>
+                <h1>Dokter Berpengalaman Kami</h1>
+            </div>
+            <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ $dokter->fotoDokter }}" alt="{{ $dokter->namaDokter }}">
+                            <img class="img-fluid" src="{{ asset('img/team-1.jpg') }}" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>{{ $dokter->namaDokter }}</h5>
-                            <p class="text-primary">{{ $dokter->spesialisasiDokter }}</p>
+                            <h5>Muhamad Azis</h5>
+                            <p class="text-primary">22523289</p>
                             <div class="team-social text-center">
-                                <a class="btn btn-square" href="#"><i class="fab fa-linkedin"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-github"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href="https://www.linkedin.com/in/maziazi/"><i class="fab fa-linkedin"></i></a>
+                                <a class="btn btn-square" href="⁠https://github.com/maziazi"><i class="fab fa-github"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com/maziazi_/"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </div>
-        <!-- Custom "Show More" Button -->
-        @if ($dokters->hasMorePages())
-            <div class="d-flex justify-content-center mt-4">
-                <a href="{{ $dokters->nextPageUrl() }}" class="btn btn-primary">Selengkapnya</a>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{{ asset('img/team-2.jpg') }}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Pugar Huda Mantoro</h5>
+                            <p class="text-primary">22523045</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin"></i></a>
+                                <a class="btn btn-square" href="⁠https://github.com/PugarHuda"><i class="fab fa-github"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{{ asset('img/team-3.jpg') }}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Raja Fawwaz Aushaf</h5>
+                            <p class="text-primary">22523050</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin"></i></a>
+                                <a class="btn btn-square" href="https://github.com/frappucinos4"><i class="fab fa-github"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{{ asset('img/team-4.jpg') }}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Muhammad Ikhsan Nurhadi</h5>
+                            <p class="text-primary">22523002</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin"></i></a>
+                                <a class="btn btn-square" href="⁠https://github.com/IkhsanNurhadi"><i class="fab fa-github"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        @endif
+        </div>
     </div>
-</div>
-
-    
-
     <!-- Team End -->
 
     <!-- Appointment Start -->
@@ -466,7 +501,7 @@
                     <a class="btn btn-link" href="{{ url('/product') }}">Produk</a>
                     <a class="btn btn-link" href="{{ url('/treatment') }}">Perawtan</a>
                     <a class="btn btn-link" href="{{ url('/consultation') }}">Konsultasi</a>
-                    <a class="btn btn-link" href="{{ url('/docter') }}">Dokter AI</a>
+                    <a class="btn btn-link" href="{{ url('/docter/index') }}">Dokter AI</a>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase text-white">Informasi Tambahan</h5>

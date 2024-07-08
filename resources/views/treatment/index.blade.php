@@ -19,8 +19,7 @@
                 @foreach ($perawatans as $perawatan)
                     <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="card h-100">
-                            <img src="{{ asset('img/prdk.jpg') }}" alt="Konsultasi Terkini" class="img-fluid w-100">
- 
+                            <img src="{{ asset('images/' . $perawatan->idPerawatan . '.jpg') }}" class="card-img-top" alt="{{ $perawatan->namaPerawatan }}">
                             <div class="card-body">
                                 <h5 class="card-title text-primary">{{ $perawatan->namaPerawatan }}</h5>
                                 <p class="card-text">Manfaat: {{ $perawatan->manfaatPerawatan }}</p>
