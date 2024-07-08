@@ -10,6 +10,7 @@
     </section>
 
     <!-- Bagian Konsultasi -->
+    <!-- namaKonsultasi, deskripsiKonsultasi, hargaKonsultasi, idKlinik(namaKlinik) -->
     <section class="consultation-section py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <div class="section-header text-center mb-5">
@@ -23,7 +24,7 @@
                             <h5 class="card-title text-primary">Dr. Yuli</h5>
                             <p class="card-text">Dr. Yuli adalah ahli dermatologi yang berpengalaman dalam berbagai perawatan kulit, termasuk perawatan jerawat, penuaan kulit, dan penyakit kulit kronis.</p>
                             <p class="card-text">Rp 111.111 | Klinik A</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -34,7 +35,7 @@
                             <h5 class="card-title text-primary">Dr. Ahmad</h5>
                             <p class="card-text">Dr. Ahmad memiliki keahlian dalam perawatan estetika dan kosmetik. Beliau juga berpengalaman dalam melakukan prosedur non-bedah untuk meningkatkan penampilan kulit.</p>
                             <p class="card-text">Rp 999.000 | Klinik B</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@
                             <h5 class="card-title text-primary">Dr. Ita</h5>
                             <p class="card-text">Dr. Ita fokus pada perawatan kulit untuk berbagai kondisi dermatologis dan kosmetik. Beliau terkenal karena pendekatannya yang holistik dan personal dalam merawat pasien.</p>
                             <p class="card-text">Rp 21.098 | Klinik A</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -56,7 +57,7 @@
                             <h5 class="card-title text-primary">Dr. Asep</h5>
                             <p class="card-text">Dr. Asep adalah ahli dalam penanganan alergi dan infeksi kulit. Beliau selalu mengedepankan diagnosis yang tepat untuk memberikan perawatan yang efektif.</p>
                             <p class="card-text">Rp 54.091 | Klinik A</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -67,7 +68,7 @@
                             <h5 class="card-title text-primary">Dr. Ria</h5>
                             <p class="card-text">Dr. Ria memiliki spesialisasi dalam perawatan kulit sensitif dan perawatan anti-penuaan. Beliau menggunakan teknik terbaru untuk memastikan hasil yang optimal.</p>
                             <p class="card-text">Rp 78.999 | Klinik C</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
@@ -78,11 +79,39 @@
                             <h5 class="card-title text-primary">Dr. Budi</h5>
                             <p class="card-text">Dr. Budi memiliki spesialisasi dalam perawatan kulit sensitif dan perawatan anti-penuaan. Beliau menggunakan teknik terbaru untuk memastikan hasil yang optimal.</p>
                             <p class="card-text">Rp 78.999 | Klinik C</p>
-                            <a href="#" class="btn btn-primary btn-block">Pesan</a>
+                            <button onclick="purchaseSuccess()" class="btn btn-primary btn-block">Pesan</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+     <!-- Purchase Success Toast -->
+     <div aria-live="polite" aria-atomic="true" style="position: relative; z-index: 1050;">
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Pemesanan Berhasil</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Terima kasih atas pemesanan Anda. Pesanan Anda akan segera diproses!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function purchaseSuccess() {
+            Swal.fire({
+                title: 'Sukses!',
+                text: 'Pembelian berhasil! Terima kasih telah membeli produk kami.',
+                icon: 'success',
+                confirmButtonText: 'Oke'
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endsection
