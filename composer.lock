@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "208e8d0400488f8de8dd3f5435dca867",
+    "content-hash": "9f9b02193baa0cb4d2432fac7a04a1dc",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2982,6 +2982,51 @@
                 }
             ],
             "time": "2024-05-21T13:39:04+00:00"
+        },
+        {
+            "name": "lucianotonet/groq-php",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucianotonet/groq-php.git",
+                "reference": "043778f8ec7341789f21e821690555d6dbcd7055"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucianotonet/groq-php/zipball/043778f8ec7341789f21e821690555d6dbcd7055",
+                "reference": "043778f8ec7341789f21e821690555d6dbcd7055",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.8",
+                "php": "^8.1.0",
+                "vlucas/phpdotenv": "^5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.0"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "LucianoTonet\\GroqPHP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luciano Tonet",
+                    "email": "tonetlds@gmail.com"
+                }
+            ],
+            "description": "PHP library to provide access to the Groq REST API",
+            "support": {
+                "issues": "https://github.com/lucianotonet/groq-php/issues",
+                "source": "https://github.com/lucianotonet/groq-php/tree/v0.0.5"
+            },
+            "time": "2024-07-04T18:31:08+00:00"
         },
         {
             "name": "masterminds/html5",

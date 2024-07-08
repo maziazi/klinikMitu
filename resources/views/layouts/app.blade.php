@@ -29,7 +29,9 @@
     @include('partials.navbar')
 
     @yield('content')
-
+<div class="app">
+        @yield('content')
+    </div>
     @include('partials.footer')
 
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -48,5 +50,6 @@
     <script>
         new WOW().init();
     </script>
+     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

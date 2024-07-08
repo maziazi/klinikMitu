@@ -73,4 +73,3 @@
 //         return view('docter.result', compact('treatment_plan', 'sorted_products'));
 //     }
 // }
-

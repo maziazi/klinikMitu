@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DokterController;
+
 
 Route::get('/', function () {
     return view('index');
@@ -45,6 +47,11 @@ Route::get('/treatment', function () {
     return view('treatment');
 });
 
+
+
+Route::get('/', [DokterController::class, 'index']);
+
+
 // use App\Http\Controllers\DocterAIController;
 
 // Route::get('/docter', function () {
@@ -52,4 +59,3 @@ Route::get('/treatment', function () {
 // });
 
 // Route::post('/docter/analyze', [DocterAIController::class, 'analyze'])->name('docter.analyze');
-
